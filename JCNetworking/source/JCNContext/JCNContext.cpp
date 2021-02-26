@@ -1,14 +1,15 @@
 #include "JCNContext.h"
 
+#include "SockLib/BKExposed.h"
+
 #include <SAELib_Singleton.h>
 
 namespace JCN_NAMESPACE
 {
-	
+
 	void JCNContext::lock()
 	{
 		while (this->rflag_.test_and_set()) { /* consider adding a wait */ };
-
 	};
 	void JCNContext::unlock()
 	{
@@ -49,5 +50,7 @@ namespace JCN_NAMESPACE
 		JCN_ASSERT(_out != nullptr);
 		return *_out;
 	};
+
+
 
 };

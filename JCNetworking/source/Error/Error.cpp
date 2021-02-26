@@ -43,7 +43,7 @@ namespace JCN_NAMESPACE
 	};
 	void set_error_callback(ErrorCallback _cb)
 	{
-		set_error_callback(&get_best_context(), _cb);
+		set_error_callback(&global_context(), _cb);
 	};
 
 	Error get_last_error(JCNContext* _context)
@@ -61,7 +61,7 @@ namespace JCN_NAMESPACE
 	};
 	Error get_last_error()
 	{
-		return get_last_error(&get_best_context());
+		return get_last_error(&global_context());
 	};
 
 }
