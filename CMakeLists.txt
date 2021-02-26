@@ -13,9 +13,6 @@ add_subdirectory("JCNetworking")
 
 
 
-
-
-
 find_package(Git QUIET)
 
 macro(ADD_GIT_DEPENDENCY depLibraryDir depTarget depName githubURL)
