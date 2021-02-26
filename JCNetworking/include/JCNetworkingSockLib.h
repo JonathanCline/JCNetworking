@@ -24,10 +24,17 @@ namespace JCN_NAMESPACE::slib
 {
 	using socket_t = ::SOCKET;
 
+	using ::addrinfo;
+	using ::fd_set;
+	using ::timeval;
+
 	using ::accept;
 	using ::bind;
 	using ::closesocket;
+	using ::connect;
+	using ::freeaddrinfo;
 	using ::getaddrinfo;
+	using ::gethostname;
 	using ::listen;
 	using ::recv;
 	using ::recvfrom;
@@ -36,6 +43,7 @@ namespace JCN_NAMESPACE::slib
 	using ::sendto;
 	using ::shutdown;
 	using ::socket;
+	using ::ioctlsocket;
 
 };
 

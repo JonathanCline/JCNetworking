@@ -22,7 +22,7 @@ set(lib_include_private
 )
 
 
-add_library(${lib_name} STATIC "include/${lib_name}.h" "include/${lib_name}Config.h" "include/${lib_name}SockLib.h" "source/${lib_name}.cpp")
+add_library(${lib_name} STATIC "include/${lib_name}.h" "include/${lib_name}Bk.h" "include/${lib_name}Config.h" "include/${lib_name}SockLib.h" "source/${lib_name}.cpp" "source/${lib_name}Bk.cpp")
 
 target_include_directories(${lib_name} PUBLIC "${lib_include_public}" PRIVATE "${lib_include_private}")
 target_link_libraries(${lib_name} PUBLIC "${lib_link_public}" PRIVATE "${lib_link_private}")
@@ -34,7 +34,8 @@ set_target_properties(${lib_name} PROPERTIES CXX_STANDARD ${lib_cxx} CXX_STANDAR
 
 add_subdirectory("source/SockLib")
 add_subdirectory("source/Error")
-
+add_subdirectory("source/JCNContext")
+add_subdirectory("source/Thread")
 
 
 

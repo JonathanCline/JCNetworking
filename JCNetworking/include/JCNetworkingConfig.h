@@ -22,4 +22,11 @@
 # error "Unsupported compiler target OS"
 #endif
 
+#ifndef JCN_ASSERT
+#include <cassert>
+#define JCN_ASSERT(condition) assert( condition )
+#endif
+
+
+
 #endif
